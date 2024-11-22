@@ -1,4 +1,4 @@
-# `@gen/nestjs-mongoose-seeder`
+# `@genehub/nestjs-mongoose-seeder`
 
 **nestjs-mongoose-seeder** is a powerful tool for database seeding in NestJS applications using Mongoose. It simplifies the process of populating databases with seed data, offering flexibility and reusability.
 
