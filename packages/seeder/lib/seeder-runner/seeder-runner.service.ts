@@ -25,10 +25,18 @@ export class SeederRunnerService implements OnModuleInit {
       const seederInstance = new Seeder();
       const metadata = this.reflector.get(SEEDER_KEY, seederInstance.constructor) as ModelDefinition;
 
-      if (metadata && typeof seederInstance.run === 'function') {
-        const model = this.moduleRef.get(getModelToken(metadata.name), {strict: false}) as Model<Document>;
-        await seederInstance.run(model, context);
+      if (!metadata || !seederInstance.constructor) {
+        continue;
       }
+
+      const model = this.moduleRef.get(getModelToken(metadata.name), {strict: false}) as Model<Document>;
+
+      if (!model) {
+        throw new Error(`Schema ${metadata.name} is not registered.`)
+      }
+
+      await seederInstance.run(model, context);
+
     }
 
     this.logger.log('Seeding completed.');

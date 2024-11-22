@@ -30,7 +30,7 @@ yarn add @genehub/nestjs-mongoose-seeder
 ```typescript
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { SeederRunnerModule } from '@namespace/nestjs-mongoose-seeder';
+import { SeederRunnerModule } from '@genehub/nestjs-mongoose-seeder';
 
 import { VideoSeeder } from './seeders/video.seeder';
 
@@ -49,7 +49,7 @@ export class AppModule {}
 ### 2. Create a Seeder
 
 ```typescript
-import { Seeder, SeederRunner } from '@gen/nestjs-mongoose-seeder';
+import { Seeder, SeederRunner } from '@genehub/nestjs-mongoose-seeder';
 import { Model } from 'mongoose';
 
 import { IVideoDocument, VideoModelDefinition } from './video.schema';
