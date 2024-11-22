@@ -14,14 +14,13 @@
   "author": "Eugene Dilbarov <eugene.dilbarov@gmail.com>",
   "homepage": "https://github.com/dilbarov/genehub/tree/main/packages/seeder#readme",
   "license": "ISC",
-  "main": "lib/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["dist"],
   "publishConfig": {
     "access": "public"
   },
@@ -31,7 +30,8 @@
   },
   "scripts": {
     "test": "node ./__tests__/@gen/seeder.test.js",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "bugs": {
     "url": "https://github.com/dilbarov/genehub/issues"
