@@ -7,7 +7,10 @@
 Ensure you have NestJS and Mongoose installed in your project.
 
 ```bash
-   npm install @namespace/nestjs-mongoose-seeder
+npm install @genehub/nestjs-mongoose-seeder
+```
+```bash
+yarn add @genehub/nestjs-mongoose-seeder
 ```
 
 ---
