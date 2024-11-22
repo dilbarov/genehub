@@ -30,7 +30,8 @@
     "url": "git+https://github.com/dilbarov/genehub.git"
   },
   "scripts": {
-    "test": "node ./__tests__/@gen/seeder.test.js"
+    "test": "node ./__tests__/@gen/seeder.test.js",
+    "build": "tsc"
   },
   "bugs": {
     "url": "https://github.com/dilbarov/genehub/issues"
