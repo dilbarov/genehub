@@ -1,6 +1,6 @@
 {
   "name": "@genehub/nestjs-mongoose-seeder",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "> TODO: description",
   "keywords": [
     "nestjs",
